@@ -26,7 +26,7 @@ namespace Infrastructure.Models
                 Email = Email,
                 PhoneNumber = PhoneNumber,
                 Category = Category,
-                SubCategory = SubCategory
+                Subcategory = SubCategory
             };
         }
     }
