@@ -11,7 +11,7 @@ namespace Infrastructure.Repositories
     public interface IContactsRepository
     {
          Task<Contact> Get(Guid contactId);
-         Task<List<Contact>> GetList(Guid contactId);
+         Task<List<Contact>> GetList();
          Task Add(Contact command);
          Task Update(Contact command);
          Task Delete(Guid contactId);
@@ -28,7 +28,7 @@ namespace Infrastructure.Repositories
             return await _context.Contacts.Where(x => x.Id == contactId).FirstOrDefaultAsync();
         }
 
-        public async Task<List<Contact>> GetList(Guid contactId)
+        public async Task<List<Contact>> GetList()
         {
             return await _context.Contacts.ToListAsync();
         }

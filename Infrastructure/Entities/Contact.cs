@@ -15,6 +15,6 @@ namespace Infrastructure.Models
         public string Email { get; set; } = null!;
         public string PhoneNumber { get; set; } = null!;
         public string Category { get; set; } = null!;
-        public string SubCategory { get; set; } = null!;
+        public string? SubCategory { get; set; }
     }
 }
