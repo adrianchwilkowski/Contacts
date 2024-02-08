@@ -39,10 +39,10 @@ namespace Infrastructure.Models
             if (Password.Length<minimumLength) {
                 response.Add("must have at least 8 characters\n");
                 return response; }
-            if (hasUppercase) { response.Add("must contain at least one uppercase\n"); }
-            if (hasLowercase) { response.Add("must contain at least one lowercase\n"); }
-            if (hasDigit) { response.Add("must contain at least one digit\n"); }
-            if (hasSpecial) { response.Add("must contain at least one special character\n"); }
+            if (!hasUppercase) { response.Add("must contain at least one uppercase\n"); }
+            if (!hasLowercase) { response.Add("must contain at least one lowercase\n"); }
+            if (!hasDigit) { response.Add("must contain at least one digit\n"); }
+            if (!hasSpecial) { response.Add("must contain at least one special character\n"); }
             return response;
         }
 
