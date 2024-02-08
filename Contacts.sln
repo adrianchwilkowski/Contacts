@@ -4,33 +4,51 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "Contacts\Contacts.csproj", "{6E382B38-32F5-47D6-BA0F-AD2F897FC472}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D} = {31932B9A-870F-4107-8F0E-9C07F4AEA64D}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Angular", "Angular", "{1A119341-E272-4600-915D-3BBFBC74F541}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular", "Angular\Angular.esproj", "{ACCCC970-B42D-4154-98E5-3645BD681129}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{31932B9A-870F-4107-8F0E-9C07F4AEA64D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|x64.Build.0 = Debug|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Debug|x86.Build.0 = Debug|Any CPU
 		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACCCC970-B42D-4154-98E5-3645BD681129}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|x64.ActiveCfg = Release|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|x64.Build.0 = Release|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E382B38-32F5-47D6-BA0F-AD2F897FC472}.Release|x86.Build.0 = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|x64.Build.0 = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Debug|x86.Build.0 = Debug|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x64.ActiveCfg = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x64.Build.0 = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x86.ActiveCfg = Release|Any CPU
+		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{ACCCC970-B42D-4154-98E5-3645BD681129} = {1A119341-E272-4600-915D-3BBFBC74F541}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E015D087-0D36-4F88-8837-75543F0436CC}
