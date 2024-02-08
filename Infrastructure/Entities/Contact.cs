@@ -19,7 +19,7 @@ namespace Infrastructure.Models
         public string? Subcategory { get; set; }
 
         //when returns empty string, password is complex, otherwise returns reasons why is not safe
-        public List<string> VerifyPassword()
+        public List<string> ValidatePassword()
         {
             var response = new List<string>();
             if (string.IsNullOrEmpty(Password))
@@ -48,7 +48,7 @@ namespace Infrastructure.Models
 
         //verifies if given category exists and subcategory is correct
         //sets subcategory as null if category is Private
-        public bool VerifyCategories()
+        public bool ValidateCategories()
         {
             if (Enum.TryParse<CategoryEnum>(Category, out _))
             {

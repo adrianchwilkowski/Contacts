@@ -3,14 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts", "Contacts\Contacts.csproj", "{6E382B38-32F5-47D6-BA0F-AD2F897FC472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts", "Contacts\Contacts.csproj", "{6E382B38-32F5-47D6-BA0F-AD2F897FC472}"
 	ProjectSection(ProjectDependencies) = postProject
 		{31932B9A-870F-4107-8F0E-9C07F4AEA64D} = {31932B9A-870F-4107-8F0E-9C07F4AEA64D}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Angular", "Angular", "{1A119341-E272-4600-915D-3BBFBC74F541}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{31932B9A-870F-4107-8F0E-9C07F4AEA64D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{31932B9A-870F-4107-8F0E-9C07F4AEA64D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,18 @@ Global
 		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x64.Build.0 = Release|Any CPU
 		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x86.ActiveCfg = Release|Any CPU
 		{31932B9A-870F-4107-8F0E-9C07F4AEA64D}.Release|x86.Build.0 = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|x64.Build.0 = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Debug|x86.Build.0 = Debug|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|x64.ActiveCfg = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|x64.Build.0 = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0E427A4A-0B75-4D5B-9B69-DD1D6B86391C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

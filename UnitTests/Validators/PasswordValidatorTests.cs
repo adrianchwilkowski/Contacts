@@ -23,7 +23,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "",
             };
-            var result = contact.VerifyPassword();
+            var result = contact.ValidatePassword();
             Assert.True(result[0] == "cannot be empty");
             Assert.True(result.Count == 1);
         }
@@ -41,7 +41,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "ambkdc",
             };
-            var result = contact.VerifyPassword();
+            var result = contact.ValidatePassword();
             Assert.True(result[0] == "must have at least 8 characters\n");
             Assert.True(result.Count == 1);
         }
@@ -59,7 +59,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "abcdo*#ml",
             };
-            var result = contact.VerifyPassword();
+            var result = contact.ValidatePassword();
             Assert.True(result[0] == "must contain at least one uppercase\n");
             Assert.True(result[1] == "must contain at least one digit\n");
             Assert.True(result.Count == 2);

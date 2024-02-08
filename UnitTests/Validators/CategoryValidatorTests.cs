@@ -24,7 +24,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "",
             };
-            var result = contact.VerifyCategories();
+            var result = contact.ValidateCategories();
             Assert.True(!result);
         }
         [Test]
@@ -41,7 +41,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "",
             };
-            var result = contact.VerifyCategories();
+            var result = contact.ValidateCategories();
             Assert.True(result);
             Assert.True(contact.Subcategory == null);
         }
@@ -59,7 +59,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "",
             };
-            var result = contact.VerifyCategories();
+            var result = contact.ValidateCategories();
             Assert.True(!result);
         }
         [Test]
@@ -76,7 +76,7 @@ namespace UnitTests.Validators
                 Subcategory = SubcategoryEnum.Boss.ToString(),
                 Password = "",
             };
-            var result = contact.VerifyCategories();
+            var result = contact.ValidateCategories();
             Assert.True(result);
         }
         [Test]
@@ -93,7 +93,7 @@ namespace UnitTests.Validators
                 Subcategory = "category",
                 Password = "",
             };
-            var result = contact.VerifyCategories();
+            var result = contact.ValidateCategories();
             Assert.True(result);
         }
     }
