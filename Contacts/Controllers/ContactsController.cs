@@ -1,5 +1,6 @@
 ﻿using Contacts.Services;
 using Infrastructure.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contacts.Controllers
@@ -22,6 +23,7 @@ namespace Contacts.Controllers
             return Ok(result);
         }
         [HttpDelete("Delete/{id}", Name = "Delete")]
+        [Authorize]
         public async Task<IActionResult> Delete(Guid id)
         {
             await _contactService.Delete(id);
