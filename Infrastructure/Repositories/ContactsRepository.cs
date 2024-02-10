@@ -48,9 +48,17 @@ namespace Infrastructure.Repositories
 
         public async Task Delete(Guid contactId)
         {
-            _context.Attach(contactId);
-            _context.Remove(contactId);
-            await _context.SaveChangesAsync();
+            var entityToDelete = await _context.Contacts.FindAsync(contactId);
+
+            if (entityToDelete != null)
+            {
+                _context.Remove(entityToDelete);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception();
+            }
         }
 
         public async Task AddRange(List<Contact> contacts)
