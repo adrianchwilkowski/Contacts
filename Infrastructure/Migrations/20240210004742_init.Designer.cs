@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240208124935_corrected-contact-entity")]
-    partial class correctedcontactentity
+    [Migration("20240210004742_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SubCategory")
+                    b.Property<string>("Subcategory")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")

@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,19 @@ namespace Infrastructure.Models
     public class Contact
     {
         public Guid Id { get; set; }
+        [MaxLength(50)]
         public string Name { get; set; } = null!;
+        [MaxLength(50)]
         public string Surname { get; set; } = null!;
+        [MaxLength(100)]
         public string Password { get; set; } = null!;
+        [MaxLength(50)]
         public string Email { get; set; } = null!;
+        [MaxLength(20)]
         public string PhoneNumber { get; set; } = null!;
+        [MaxLength(50)]
         public string Category { get; set; } = null!;
+        [MaxLength(50)]
         public string? Subcategory { get; set; }
 
         //when returns empty string, password is complex, otherwise returns reasons why is not safe
