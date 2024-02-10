@@ -1,0 +1,137 @@
+﻿[
+  {
+    "Name": "John",
+    "Surname": "Doe",
+    "Password": "Password123!",
+    "Email": "john.doe@example.com",
+    "PhoneNumber": "123-456-7890",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "Alice",
+    "Surname": "Smith",
+    "Password": "Abc12345@",
+    "Email": "alice.smith@example.com",
+    "PhoneNumber": "987-654-3210",
+    "Category": "Business",
+    "SubCategory": "Boss"
+  },
+  {
+    "Name": "Michael",
+    "Surname": "Johnson",
+    "Password": "Passw0rd!",
+    "Email": "michael.johnson@example.com",
+    "PhoneNumber": "555-555-5555",
+    "Category": "Other",
+    "SubCategory": "Dancer"
+  },
+  {
+    "Name": "Emily",
+    "Surname": "Brown",
+    "Password": "SecurePa$$",
+    "Email": "emily.brown@example.com",
+    "PhoneNumber": "111-222-3333",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "Daniel",
+    "Surname": "Martinez",
+    "Password": "Daniel123!",
+    "Email": "daniel.martinez@example.com",
+    "PhoneNumber": "777-888-9999",
+    "Category": "Business",
+    "SubCategory": "Employee"
+  },
+  {
+    "Name": "Sophia",
+    "Surname": "Taylor",
+    "Password": "Sophia1!@",
+    "Email": "sophia.taylor@example.com",
+    "PhoneNumber": "444-444-4444",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "David",
+    "Surname": "Wilson",
+    "Password": "WilsonPa$$",
+    "Email": "david.wilson@example.com",
+    "PhoneNumber": "666-666-6666",
+    "Category": "Other",
+    "SubCategory": "Singer"
+  },
+  {
+    "Name": "Olivia",
+    "Surname": "Garcia",
+    "Password": "Olivia1!@",
+    "Email": "olivia.garcia@example.com",
+    "PhoneNumber": "123-123-1234",
+    "Category": "Business",
+    "SubCategory": "Manager"
+  },
+  {
+    "Name": "William",
+    "Surname": "Anderson",
+    "Password": "AndersonPa$$",
+    "Email": "william.anderson@example.com",
+    "PhoneNumber": "999-999-9999",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "Emma",
+    "Surname": "Rodriguez",
+    "Password": "Emma123!",
+    "Email": "emma.rodriguez@example.com",
+    "PhoneNumber": "555-123-4567",
+    "Category": "Other",
+    "SubCategory": ""
+  },
+  {
+    "Name": "James",
+    "Surname": "Martinez",
+    "Password": "JamesPa$$1",
+    "Email": "james.martinez@example.com",
+    "PhoneNumber": "321-654-9876",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "Ava",
+    "Surname": "Hernandez",
+    "Password": "Ava1!@Sales",
+    "Email": "ava.hernandez@example.com",
+    "PhoneNumber": "111-222-3333",
+    "Category": "Business",
+    "SubCategory": "Client"
+  },
+  {
+    "Name": "Alexander",
+    "Surname": "Jones",
+    "Password": "Alex123!@",
+    "Email": "alexander.jones@example.com",
+    "PhoneNumber": "777-888-9999",
+    "Category": "Other",
+    "SubCategory": "Coach"
+  },
+  {
+    "Name": "Mia",
+    "Surname": "Gonzalez",
+    "Password": "MiaPa$$1!",
+    "Email": "mia.gonzalez@example.com",
+    "PhoneNumber": "444-555-6666",
+    "Category": "Private",
+    "SubCategory": ""
+  },
+  {
+    "Name": "Ethan",
+    "Surname": "Perez",
+    "Password": "Ethan1!@Pa$$",
+    "Email": "ethan.perez@example.com",
+    "PhoneNumber": "555-555-5555",
+    "Category": "Employee",
+    "SubCategory": ""
+  }
+]

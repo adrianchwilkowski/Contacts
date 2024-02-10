@@ -12,8 +12,9 @@ namespace Infrastructure.Repositories
     {
          Task<Contact> Get(Guid contactId);
          Task<List<Contact>> GetList();
-         Task Add(Contact command);
-         Task Update(Contact command);
+         Task Add(Contact contact);
+         Task AddRange(List<Contact> contacts);
+         Task Update(Contact contact);
          Task Delete(Guid contactId);
     }
         public class ContactsRepository : IContactsRepository
@@ -33,15 +34,15 @@ namespace Infrastructure.Repositories
             return await _context.Contacts.ToListAsync();
         }
 
-        public async Task Add(Contact command)
+        public async Task Add(Contact contact)
         {
-            await _context.Contacts.AddAsync(command);
+            await _context.Contacts.AddAsync(contact);
             await _context.SaveChangesAsync();
         }
 
-        public async Task Update(Contact command)
+        public async Task Update(Contact contact)
         {
-            _context.Contacts.Update(command);
+            _context.Contacts.Update(contact);
             await _context.SaveChangesAsync();
         }
 
@@ -50,6 +51,17 @@ namespace Infrastructure.Repositories
             _context.Attach(contactId);
             _context.Remove(contactId);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task AddRange(List<Contact> contacts)
+        {
+                //foreach (Contact contact in contacts)
+                //{
+                //    await _context.Contacts.AddAsync(contact);
+                //}
+            
+            await _context.AddRangeAsync(contacts);
+            _context.SaveChanges();
         }
     }
 }
