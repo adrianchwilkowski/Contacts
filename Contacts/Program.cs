@@ -1,3 +1,4 @@
+using Contacts.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.RegisterDbContext(builder.Configuration);
 builder.Services.AddTransient<IContactsRepository, ContactsRepository>();
+builder.Services.AddTransient<IContactService, ContactService>();
 
 var app = builder.Build();
 
