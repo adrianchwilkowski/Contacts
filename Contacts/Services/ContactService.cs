@@ -1,5 +1,7 @@
 ﻿using Infrastructure.Models;
 using Infrastructure.Repositories;
+using Infrastructure.SeedData;
+using Newtonsoft.Json;
 
 namespace Contacts.Services
 {
@@ -10,6 +12,7 @@ namespace Contacts.Services
         Task<Guid> Add(ContactCommand command);
         Task Update(Contact command);
         Task Delete(Guid contactId);
+        Task SeedData();
     }
     public class ContactService : IContactService
     {
@@ -75,6 +78,16 @@ namespace Contacts.Services
             {
                 throw new BadHttpRequestException("Wrong combination of categories.");
             }
+        }
+
+        public async Task SeedData()
+        {
+            var data = SeedContacts.SeedData();
+            try
+            {
+                await _contactsRepository.AddRange(data);
+            }
+            catch (Exception) { throw new Exception("error"); }
         }
     }
 }
