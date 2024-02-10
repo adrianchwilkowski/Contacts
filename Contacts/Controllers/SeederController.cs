@@ -8,14 +8,22 @@ namespace Contacts.Controllers
     public class SeederController : Controller
     {
         private IContactService _contactService;
-        public SeederController(IContactService contactService)
+        private IIdentityService _identityService;
+        public SeederController(IContactService contactService, IIdentityService identityService)
         {
             _contactService = contactService;
+            _identityService = identityService;
         }
-        [HttpGet]
-        public IActionResult Seed()
+        [HttpGet("SeedContacts")]
+        public async Task<IActionResult> SeedContacts()
         {
-            _contactService.SeedData();
+            await _contactService.SeedData();
+            return Ok();
+        }
+        [HttpGet("SeedUser")]
+        public async Task<IActionResult> SeedUser()
+        {
+            await _identityService.SeedUser();
             return Ok();
         }
     }
