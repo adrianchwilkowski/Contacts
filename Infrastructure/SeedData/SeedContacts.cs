@@ -20,12 +20,12 @@ namespace Infrastructure.SeedData
             };
             var data = JsonToStringConverter.ToJson(json, model);
             var contacts = new List<Contact>();
-            ContactCommand toContactCommand;
+            AddContactCommand toContactCommand;
             Contact contactToAdd;
 
             foreach (var contact in data)
             {
-                toContactCommand = new ContactCommand()
+                toContactCommand = new AddContactCommand()
                 {
                     Name = contact[0],
                     Surname = contact[1],

@@ -8,8 +8,8 @@ namespace Contacts.Services
     public interface IContactService
     {
         Task<Contact> Get(Guid contactId);
-        Task<List<Contact>> GetList();
-        Task<Guid> Add(ContactCommand command);
+        Task<List<ListContactContract>> GetList();
+        Task<Guid> Add(AddContactCommand command);
         Task Update(Contact command);
         Task Delete(Guid contactId);
         Task SeedData();
@@ -21,7 +21,7 @@ namespace Contacts.Services
         {
             _contactsRepository = contactsRepository;
         }
-        public async Task<Guid> Add(ContactCommand command)
+        public async Task<Guid> Add(AddContactCommand command)
         {
             var contact = command.ParseToEntityModel();
             ValidateContact(contact);
@@ -51,9 +51,15 @@ namespace Contacts.Services
             catch (Exception) { throw new BadHttpRequestException("Contact with given ID doesn't exist."); }
         }
 
-        public async Task<List<Contact>> GetList()
+        public async Task<List<ListContactContract>> GetList()
         {
-            return await _contactsRepository.GetList();
+            var response = await _contactsRepository.GetList();
+            List<ListContactContract> result = new List<ListContactContract>();
+            foreach (var contact in response)
+            {
+                result.Add(ListContactContract.FromContact(contact));
+            }
+            return result;
         }
 
         public async Task Update(Contact contact)
