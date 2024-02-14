@@ -4,7 +4,7 @@ To run the application, follow these steps:
 
 ## .NET Project:
 
-1. In the NuGet Package Console, type `update-database`.
+1. In the NuGet Package Console, choose project `Infrastructure` and type `update-database`.
 2. To seed some data use `/Seeder/SeedContacts` and `/Seeder/SeedUser` endpoints.
 
 ## Angular Project:
