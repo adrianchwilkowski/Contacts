@@ -40,23 +40,28 @@ export class IdentityService {
     );
   }
 
- loginUser(login: string, password: string) :Observable<void> {
+//  
+loginUser(login: string, password: string): Observable<void> {
   return new Observable<void>((observer) => {
     this.logout();
-    var loginModel:Login = {
-      login :login,
-      password : password
-    }
+    const loginModel: Login = {
+      login: login,
+      password: password
+    };
     this.login(loginModel).subscribe(() => {
       if (this.getToken() !== null) {
         localStorage.setItem(this.isLoggedIn, "true");
         this.router.navigate(['/']).then(() => {
           window.location.reload();
         });
+        observer.next(); // Informujemy obserwatora o zakończeniu logowania
+        observer.complete();
       }
-    })
+    }, (error) => {
+      observer.error(error); // Przekazujemy błąd do obserwatora
     });
-  }
+  });
+}
   
   isLogged(): boolean{
     if(localStorage.getItem(this.isLoggedIn) == "true"){
