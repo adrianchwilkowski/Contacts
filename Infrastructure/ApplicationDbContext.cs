@@ -1,4 +1,5 @@
-﻿using Infrastructure.Models;
+﻿using Infrastructure.Entities;
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,5 +17,7 @@ namespace Infrastructure
 
         }
         public DbSet<Contact> Contacts { get; set; } = null!;
+        public DbSet<Category> Categories { get; set; } = null!;
+        public DbSet<Subcategory> Subcategories { get; set; } = null!;
     }
 }

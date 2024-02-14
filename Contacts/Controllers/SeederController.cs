@@ -18,6 +18,7 @@ namespace Contacts.Controllers
         public async Task<IActionResult> SeedContacts()
         {
             await _contactService.SeedData();
+            await _contactService.SeedEnums();
             return Ok();
         }
         [HttpGet("SeedUser")]

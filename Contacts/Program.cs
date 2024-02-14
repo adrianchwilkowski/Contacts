@@ -98,6 +98,7 @@ builder.Services.AddSwaggerGen(option =>
 builder.Services.AddTransient<IContactsRepository, ContactsRepository>();
 builder.Services.AddTransient<IContactService, ContactService>();
 builder.Services.AddTransient<IIdentityService, IdentityService>();
+builder.Services.AddTransient<ICategoriesRepository, CategoriesRepository>();
 
 var app = builder.Build();
 

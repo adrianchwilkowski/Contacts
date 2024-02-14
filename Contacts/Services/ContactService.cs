@@ -1,4 +1,6 @@
-﻿using Infrastructure.Models;
+﻿using Infrastructure.Entities;
+using Infrastructure.Enums;
+using Infrastructure.Models;
 using Infrastructure.Repositories;
 using Infrastructure.SeedData;
 using Newtonsoft.Json;
@@ -13,13 +15,17 @@ namespace Contacts.Services
         Task Update(Contact command);
         Task Delete(Guid contactId);
         Task SeedData();
+        Task SeedEnums();
     }
     public class ContactService : IContactService
     {
         private IContactsRepository _contactsRepository { get; set; }
-        public ContactService(IContactsRepository contactsRepository)
+        private ICategoriesRepository _categoriesRepository { get; set; }
+
+        public ContactService(IContactsRepository contactsRepository, ICategoriesRepository categoriesRepository)
         {
             _contactsRepository = contactsRepository;
+            _categoriesRepository = categoriesRepository;
         }
         public async Task<Guid> Add(AddContactCommand command)
         {
@@ -94,6 +100,28 @@ namespace Contacts.Services
                 await _contactsRepository.AddRange(data);
             }
             catch (Exception) { throw new Exception("error"); }
+        }
+        public async Task SeedEnums()
+        {
+            var categories = new List<Category>() {
+                new Category(){ Id = Guid.NewGuid(), Name = CategoryEnum.Private.ToString()},
+                new Category(){ Id = Guid.NewGuid(), Name = CategoryEnum.Business.ToString()},
+                new Category(){ Id = Guid.NewGuid(), Name = CategoryEnum.Other.ToString()},
+            };
+            var subcategories = new List<Subcategory>() {
+                new Subcategory(){ Id = Guid.NewGuid(), Name = SubcategoryEnum.Boss.ToString()},
+                new Subcategory(){ Id = Guid.NewGuid(), Name = SubcategoryEnum.Client.ToString()},
+                new Subcategory(){ Id = Guid.NewGuid(), Name = SubcategoryEnum.Employee.ToString()},
+                new Subcategory(){ Id = Guid.NewGuid(), Name = SubcategoryEnum.Manager.ToString()},
+            };
+            foreach (var category in categories)
+            {
+                await _categoriesRepository.AddCategory(category);
+            }
+            foreach (var subcategory in subcategories)
+            {
+                await _categoriesRepository.AddSubcategory(subcategory);
+            }
         }
     }
 }
