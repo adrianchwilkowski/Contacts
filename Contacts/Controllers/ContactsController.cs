@@ -15,16 +15,15 @@ namespace Contacts.Controllers
             _contactService = contactService;
         }
 
-
+        [Authorize]
         [HttpPost("Add", Name = "Add")]
-        public async Task<ActionResult<Guid>> Add([FromBody] ContactCommand command)
+        public async Task<ActionResult<Guid>> Add([FromBody] AddContactCommand command)
         {
             var result = await _contactService.Add(command);
             return Ok(result);
         }
-        [HttpDelete("Delete/{id}", Name = "Delete")]
         [Authorize]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpDelete("Delete/{id}", Name = "Delete")]        public async Task<IActionResult> Delete(Guid id)
         {
             await _contactService.Delete(id);
             return Ok();
@@ -36,11 +35,12 @@ namespace Contacts.Controllers
             return Ok(result);
         }
         [HttpGet("GetList", Name = "GetList")]
-        public async Task<ActionResult<List<Contact>>> GetList()
+        public async Task<ActionResult<List<ListContactContract>>> GetList()
         {
             var result = await _contactService.GetList();
             return Ok(result);
         }
+        [Authorize]
         [HttpPut("Update", Name = "Update")]
         public async Task<IActionResult> Update([FromBody] Contact command)
         {
