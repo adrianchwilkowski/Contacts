@@ -1,0 +1,38 @@
+<div class="contact-details">
+    <h2>Contact Details</h2>
+    <div class="detail">
+      <label>ID:</label>
+      <span>{{ contact.id }}</span>
+    </div>
+    <div class="detail">
+      <label>Name:</label>
+      <span>{{ contact.name }}</span>
+    </div>
+    <div class="detail">
+      <label>Surname:</label>
+      <span>{{ contact.surname }}</span>
+    </div>
+    <div class="detail">
+      <label>Password:</label>
+      <span>{{ contact.password }}</span>
+    </div>
+    <div class="detail">
+      <label>Email:</label>
+      <span>{{ contact.email }}</span>
+    </div>
+    <div class="detail">
+      <label>Phone Number:</label>
+      <span>{{ contact.phoneNumber }}</span>
+    </div>
+    <div class="detail">
+      <label>Category:</label>
+      <span>{{ contact.category }}</span>
+    </div>
+    <div class="detail" *ngIf="contact.subcategory">
+      <label>Subcategory:</label>
+      <span>{{ contact.subcategory }}</span>
+    </div>
+    <div class="contact-actions">
+      <button *ngIf="logged" (click)="update()">Update</button>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+.contact-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details h2 {
+    margin-top: 0;
+  }
+  
+  .detail {
+    margin-bottom: 10px;
+  }
+  
+  .detail label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .detail span {
+    color: #333;
+  }
