@@ -1,0 +1,18 @@
+<header class="site-header">
+    <div class="site-header-wrapper">
+      <nav>
+        <ul>
+          <li><a [routerLink]="['']">Home</a></li>
+          
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <ul>
+          <li class="cart-icon">
+            <button *ngIf="!logged" (click)="onLogin()">Login</button>
+            <button *ngIf="logged" (click)="onLogout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</header>
