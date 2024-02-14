@@ -1,0 +1,50 @@
+<div>
+    <h1>Edit Contact </h1>
+    <hr>
+    <div class="col-md-4">
+      <form [formGroup]="updateForm" (ngSubmit)="update()" autocomplete="off" novalidate>
+        <div class="form-group">
+          <label for="name">name:</label>
+          <input formControlName="name" id="name" type="text" class="form-control" placeholder="{{name}}"/>
+        </div>
+        <div class="form-group">
+          <label for="surname">surname:</label>
+          <input formControlName="surname" id="surname" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input formControlName="email" id="email" type="text" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="password">password:</label>
+            <input formControlName="password" id="password" type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">phone number:</label>
+            <input formControlName="phoneNumber" id="phoneNumber" type="text" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="category">category:</label>
+            <select formControlName="category" id="category" type="text" class="form-control" (change)="onCategoryChange($event.target)" >
+              <option value="{{categories.Business}}">Business</option>
+              <option value="{{categories.Private}}">Private</option>
+              <option value="{{categories.Other}}">Other</option>
+            </select>
+          </div>
+          <div class="form-group" *ngIf="category=='Other'">
+            <label for="subcategory">subcategory:</label>
+            <input formControlName="subcategory" id="subcategory" type="text" class="form-control"/>
+          </div>
+          <div class="form-group" *ngIf="category=='Business'">
+            <label for="subcategory">subcategory:</label>
+            <select formControlName="subcategory" id="subcategory" type="text" class="form-control">
+              <option value="{{subcategories.Boss}}">Boss</option>
+              <option value="{{subcategories.Client}}">Client</option>
+              <option value="{{subcategories.Employee}}">Employee</option>
+              <option value="{{subcategories.Manager}}">Manager</option>
+            </select>
+          </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    <div>
+  </div>
