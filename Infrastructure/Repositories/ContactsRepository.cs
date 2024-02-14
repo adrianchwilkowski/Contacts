@@ -26,7 +26,9 @@ namespace Infrastructure.Repositories
 
         public async Task<Contact> Get(Guid contactId)
         {
-            return await _context.Contacts.Where(x => x.Id == contactId).FirstOrDefaultAsync();
+            var result = await _context.Contacts.Where(x => x.Id == contactId).FirstOrDefaultAsync();
+            if (result == null) { throw new Exception(); };
+            return result;
         }
 
         public async Task<List<Contact>> GetList()

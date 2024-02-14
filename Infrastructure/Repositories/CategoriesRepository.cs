@@ -40,7 +40,9 @@ namespace Infrastructure.Repositories
 
         public async Task<Category> GetCategory(Guid id)
         {
-            return await _context.Categories.Where(x => x.Id == id).FirstOrDefaultAsync();
+            var result = await _context.Categories.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if(result == null) { throw new Exception(); };
+            return result;
         }
         public async Task AddSubcategory(Subcategory category)
         {

@@ -1,4 +1,5 @@
 using Contacts.Jwt;
+using Contacts.Middleware;
 using Contacts.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
@@ -118,6 +119,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.MapControllers();
 
