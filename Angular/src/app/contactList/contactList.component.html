@@ -1,0 +1,24 @@
+<h1>Contact List</h1>
+
+<ul *ngIf="contactList.length > 0">
+    <div class="contact-headers">
+      <span class="contact-column">Name</span>
+      <span class="contact-column">Email</span>
+      <span class="contact-column">Phone</span>
+      <span class="contact-column">Category</span>
+    </div>
+    <div class="contact-data" *ngFor="let contact of contactList">
+      <span class="contact-value">{{ contact.name }} {{ contact.surname }}</span>
+      <span class="contact-value">{{ contact.email }}</span>
+      <span class="contact-value">{{ contact.phoneNumber }}</span>
+      <span class="contact-value">{{ contact.category }}</span>
+      <div class="contact-actions" >
+        <button (click)="onDetail(contact.id)">Detail</button>
+        <button *ngIf="logged" (click)="onDelete(contact.id)">Delete</button>
+      </div>
+    </div>
+</ul>
+
+<div *ngIf="contactList.length === 0">
+  <p>No contacts found.</p>
+</div>
