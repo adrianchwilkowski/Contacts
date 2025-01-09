@@ -2,7 +2,7 @@
 
 This project was created a long time ago, and its purpose was to showcase my knowledge at the time.
 
-## Running the Application
+# Running the Application
 
 To run the application, follow these steps:
 
