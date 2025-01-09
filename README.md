@@ -1,4 +1,4 @@
-## About Project
+# About Project
 
 This project was created a long time ago, and its purpose was to showcase my knowledge at the time.
 
