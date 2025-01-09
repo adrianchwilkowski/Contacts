@@ -1,6 +1,6 @@
 # About Project
 
-This project was created a long time ago, and its purpose was to showcase my knowledge at the time.
+This project is a simple web application. It was created a long time ago, and its purpose was to showcase my knowledge at the time.
 
 # Running the Application
 
